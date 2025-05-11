@@ -6,6 +6,7 @@
  */
 
 import { TodoTemplate } from "../templates/TodoTemplate";
+import { TodoProvider } from "../contexts/TodoContext.jsx";
 
 /**
  * TodoPage
@@ -18,7 +19,9 @@ export const TodoPage = () => {
     return (
         <div>
             <h1>Todo Page</h1>
-            <TodoTemplate />
+            <TodoProvider>
+                <TodoTemplate />
+            </TodoProvider>
         </div>
     )
 };
